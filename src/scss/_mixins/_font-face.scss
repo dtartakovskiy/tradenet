@@ -1,0 +1,20 @@
+@mixin google-font($font) {
+  $font: unquote($font);
+  @import url(https://fonts.googleapis.com/css2?family=#{$font});
+}
+
+@mixin font-face($font, $path, $font-weight) {
+  @font-face {
+    font-family: $font;
+    src: url('#{$path}.eot'); /* IE9 Compat Modes */
+    src: url('#{$path}.eot?#iefix') format('embedded-opentype'),
+      /* IE6-IE8 */ url('#{$path}.svg##{$font}') format('svg'),
+      /* Legacy iOS */ url('#{$path}.woff2') format('woff2'),
+      /* Super Modern Browsers */ url('#{$path}.woff') format('woff'),
+      /* Pretty Modern Browsers */ url('#{$path}.ttf') format('truetype'),
+      /* Safari, Android, iOS */ url('#{$path}.svg##{$font}') format('svg'); /* Legacy iOS */
+    font-weight: $font-weight;
+    font-style: normal;
+    font-display: swap;
+  }
+}

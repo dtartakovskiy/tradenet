@@ -1,0 +1,149 @@
+extends ../templates/layout
+
+block variables
+	-
+		const pageTitle = 'Clicklogiq tech__task';
+		const description = 'Clicklogiq technical task';
+		const keywords = 'Clicklogiq, test';
+		const language = 'en';
+
+
+block content
+	section.welcome
+		.container
+			.welcome__inner
+				.welcome__content
+					.welcome__title
+						| We teach you.
+						| We fund you.
+					.welcome__subtitle You keep most of the profits
+					.welcome__info
+						|We have educated more than
+						b 16,000 traders worldwide
+						|since 2004 & completely funded their trading
+						| accounts. You can be next
+					.welcome__gray-rect
+
+				.welcome__form
+					.welcome-auth
+						.welcome-auth__logo
+							img(src="/src/assets/img/auth-logo.jpg", alt="logo")
+						.welcome-auth__title You’re one step away from joining our elite trading team
+						.welcome-auth__subtitle Just fill in the fields below with your personal data
+
+						.welcome-auth__body
+							form.welcome-auth__form#form
+								.form-group
+									.form-group__inner
+										.form-group__icon
+											img(src="assets/img/person-icon.png", alt="icon")
+										.form-group__input
+											input(class="form-group__element" type="text" id="firstName" name="firstName" placeholder=" " required)
+											span.floating First Name
+									.form-group__invalid-feedback Name must be at least 3 characters (only letters) long	
+
+								.form-group
+									.form-group__inner
+										.form-group__icon
+											img(src="assets/img/person-icon.png", alt="icon")
+										.form-group__input
+											input(class="form-group__element" type="text" id="lastName" name="lastName"  placeholder=" " required)
+											span.floating Last Name
+									.form-group__invalid-feedback Last name must be at least 3 characters (only letters) long	
+
+								.form-group
+									.form-group__inner
+										.form-group__icon
+											img(src="/src/assets/img/email-icon.png", alt="icon")
+										.form-group__input
+											input(class="form-group__element" type="text" id="email" name="email" placeholder=" " required)
+											span.floating Email
+									.form-group__invalid-feedback Enter a valid email
+
+								.form-group
+									.form-group__inner
+										.form-group__icon
+											img(src="assets/img/location-icon.png", alt="icon")
+										select(class="form-group__element" id="country" name="country")
+
+											option(value='romania' dataPrefix='+40000') Romania
+											option(value='ukraine' dataPrefix='+38000') Ukraine
+											option(value='austria' dataPrefix='+43000') Austria
+											option(value='germany' dataPrefix='+49000') Germany
+										.form-group__helper-icon
+											img(src="assets/img/form-arrow-icon.png", alt="")
+
+								.form-group
+									.form-group__inner
+										.form-group__icon
+											img(src="assets/img/phone-icon.png", alt="icon")
+										.form-group__phone-code#phonePrefix 
+										.form-group__input.form-group__phone-input
+											input(class="form-group__element" type="text" id="phone" name="phone" placeholder=" " required)
+											span.floating Phone
+									.form-group__invalid-feedback Phone must be at least 7 characters (only digits) long
+						
+								
+								.welcome-auth__action
+									button(type="submit").btn.btn--lime#submit-btn Try a 14-day trial period
+
+								.welcome-auth__info
+									|You will be contacted shortly by one of our
+									|trading mentors.
+
+
+	section.offer
+		.container
+			h1.offer__title.section-title What we offer
+
+			ul.offer-list
+
+				li.offer-list__item
+					.offer-list__icon
+						img(src="assets/img/offer-education.png", alt="icon")
+					h3.offer-list__title Personalized trading education
+					.offer-list__description 
+						p 
+							span Meir Barak 
+							|and his team of highly skilled financial experts provide you with 1-on-1 personal mentorship in the art of day trading
+
+				li.offer-list__item
+					.offer-list__icon
+						img(src="assets/img/offer-account.png", alt="icon")
+					h3.offer-list__title A Pro Funded Account
+					.offer-list__description
+						p Upon completion of a Self-Study course and a 14-day demo practice you will receive a funded trading account of up to $240,000.
+						p Any losses are absorbed by Tradenet and you keep 80% to 95% of the profits you earn from trading 
+
+
+				li.offer-list__item
+					.offer-list__icon
+						img(src="assets/img/offer-academy.png", alt="icon")
+					h3.offer-list__title Stellar trading academy
+					.offer-list__description
+						p • Get access to extensive training materials, Demo Account, live practice sessions & much more, everything designed for your skill level
+						p • All with as low as $500!
+
+
+	section.start
+		.container
+			h2.start__title.section-title Allow us to fund you
+			button.btn.btn--lime
+				span Start Now
+				img(src="assets/img/btn-arrow-icon.png", alt="icon")
+
+
+	footer.footer
+		.container
+			.footer__wrapper
+				p 
+					|Tradenet is a Day Trading Training school that offers day and swing trading courses in stocks and futures. At Tradenet we specialize in day trading courses that are suitable for those familiar with day trading, or beginners with no prior knowledge or experience with day
+					br
+					| trading.
+
+				p We offer three different learning options; Self-Study online course, online courses in the comfort of your own home or an exclusive course, one-on-one with an experienced day trading mentor at your own pace. We also offer online live day Trading Room and the potential for funded sub-accounts for our students. Most of our services are offered in several languages, including: Spanish, German, French, Russian, Hungarian, Italian, Arabic and more.
+
+
+
+
+

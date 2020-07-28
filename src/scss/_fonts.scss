@@ -1,0 +1,11 @@
+@import '_mixins/font-face';
+
+// Open sans
+@include google-font('Open+Sans:wght@400;600;700;800&display=swap');
+
+// Open sans Extrabold
+@include font-face(
+	'OpenSans-Extrabold',
+	'../fonts/OpenSans-Extrabold/OpenSans-Extrabold',
+	800
+);
